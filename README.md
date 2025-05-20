@@ -6,7 +6,17 @@ A Firefox browser extension for downloading media with [`yt-dlp`](https://github
 
 Install the extension from [here](https://addons.mozilla.org/en-US/firefox/addon/yt-dlp-downloader/).
 
-Then clone this repository and run `make install` to install the required helper.
+Then clone this repository and run `make install INSTALL_DIR=$INSTALL_DIR` to install the required helper based on your browser:
+
+| Browser                                                                                                                                        | $INSTALL_DIR    |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------|:----------------|
+| [Firefox](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions-recommended) | mozilla         |
+| Firefox Developer Edition                                                                                                                      | mozilla         |
+| Firefox Nightly                                                                                                                                | mozilla         |
+| [LibreWolf](https://librewolf.net/installation/debian/)                                                                                        | librewolf       |
+| [Mullvad](https://mullvad.net/en/download/browser/linux)                                                                                       | mullvad-browser |
+
+Note that this is assuming that you have downloaded your browser through a Debian repository or other package manager.
 
 ## Snap/flatpak permissions
 
