@@ -8,15 +8,28 @@ Install the extension from [here](https://addons.mozilla.org/en-US/firefox/addon
 
 Then clone this repository and run `make install INSTALL_DIR=$INSTALL_DIR` to install the required helper based on your browser:
 
-| Browser                                                                                                                                        | $INSTALL_DIR    |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------|:----------------|
-| [Firefox](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions-recommended) | mozilla         |
-| Firefox Developer Edition                                                                                                                      | mozilla         |
-| Firefox Nightly                                                                                                                                | mozilla         |
-| [LibreWolf](https://librewolf.net/installation/debian/)                                                                                        | librewolf       |
-| [Mullvad](https://mullvad.net/en/download/browser/linux)                                                                                       | mullvad-browser |
+| Browser                                                                                                                                        | $INSTALL_DIR           |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------|
+| [Firefox](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions-recommended) | $HOME/.mozilla         |
+| Firefox Developer Edition                                                                                                                      | $HOME/.mozilla         |
+| Firefox Nightly                                                                                                                                | $HOME/.mozilla         |
+| [LibreWolf](https://librewolf.net/installation/debian/)                                                                                        | $HOME/.librewolf       |
+| [Mullvad](https://mullvad.net/en/download/browser/linux)                                                                                       | $HOME/.mullvad-browser |
 
 Note that this is assuming that you have downloaded your browser through a Debian repository or other package manager.
+
+### Tor Browser Installation
+
+```
+make install-tor
+```
+
+This is assuming that you have installed the Tor Browser via the Debian package `torbrowser-launcher`.
+If you downloaded it alternatively, you can run the above target like so:
+
+```
+make install-tor TOR_INSTALL_DIR=$TOR_INSTALL_DIR
+```
 
 ## Snap/flatpak permissions
 
